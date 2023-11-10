@@ -6,6 +6,6 @@ const app = express();
 
 app.use(bodyParser.json());
 app.use('/user', route);
-app.use((error, req, res, next) => res.send(error.message));
+app.use((error, req, res, _next) => res.send(error.message));
 
 module.exports = app;
